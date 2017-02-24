@@ -2,11 +2,17 @@ Copy-Item -force $PSScriptRoot\nginx.conf c:\nginx\conf\
 
 $nginx = Get-Process nginx -ErrorAction SilentlyContinue
 if ($nginx) {
-    & 'C:\nginx\nginx.exe' '-s reload'
+    $CMD = 'C:\nginx\nginx.exe'
+    $arg1 = '-s'
+    $arg2 = 'reload'
+    & $CMD $arg1 $arg2
     # wait five seconds
     Sleep 5
 }
 else {
-    & 'start C:\nginx\nginx.exe'
+    $CMD = 'start'
+    $arg1 = 'C:\nginx\nginx.exe'
+    & $CMD $arg1
 }
+
 Remove-Variable nginx
