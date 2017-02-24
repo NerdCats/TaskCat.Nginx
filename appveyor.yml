@@ -7,8 +7,8 @@ branches:
 clone_depth: 10
 build: off
 artifacts:
-- path: nginx.conf
-  name: TaskCat.Nginx
+- path: '**'
+  name: TaskCatNginx
   type: zip
 deploy:
 - provider: Environment
