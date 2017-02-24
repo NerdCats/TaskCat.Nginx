@@ -14,11 +14,11 @@ deploy:
 - provider: Environment
   name: TaskCatDev
   on:
-    branch: SelfHostService
+    branch: master
 - provider: Environment
   name: TaskCatProd
   on:
-    branch: SelfHostServiceProd
+    branch: release
 notifications:
 - provider: Slack
   incoming_webhook: https://hooks.slack.com/services/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
