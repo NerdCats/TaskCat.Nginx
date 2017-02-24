@@ -7,7 +7,7 @@ branches:
 clone_depth: 10
 build: off
 artifacts:
-- path: *.*
+- path: .\
   name: TaskCat.Nginx
   type: zip
 deploy:
