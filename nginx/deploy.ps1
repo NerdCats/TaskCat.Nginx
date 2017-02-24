@@ -1,1 +1,1 @@
-Copy-Item nginx.conf c:\
+Copy-Item $PSScriptRoot\nginx.conf c:\
