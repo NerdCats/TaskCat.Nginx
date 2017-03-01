@@ -5,12 +5,8 @@ $nginx = Get-Process nginx -ErrorAction SilentlyContinue
 if ($nginx) {
     $CMD = 'C:\nginx\reload.bat'
     start-process $CMD
-    # wait five seconds
-    Sleep 5
 }
 else {
     $CMD = 'C:\nginx\start.bat'
     start-process $CMD
 }
-
-Remove-Variable nginx
